@@ -1,6 +1,6 @@
 #!/bin/bash
 # Ce script purge certains fichiers dans les repertoires personnels une fois par mois
-# DSI - DANE de l'académie de Lyon
+# DSI - DANE de l'académie de Lyon - Thibaud Galloy & Raphaël Brocq
 # 1.0 - Mai 2017
 
 if [ ! -d /var/log/purge ] ; then
@@ -89,7 +89,7 @@ purge_mensuelle()
     ## Suppression du dossier Scratch
     echo + Nettoyage Scratch
     find /home -maxdepth 10 -type d -iregex '/home/.?/[^/]*/perso/\(.Config\|config_eole\)/Application\ Data/edu\.media\.mit\.Scratch2Editor' -exec rm -rf {} \; -print
-    ####################print
+    ####################
 
 
 }
